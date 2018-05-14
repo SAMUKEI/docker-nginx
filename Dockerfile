@@ -12,6 +12,8 @@ RUN mkdir -p /opt/data && mkdir /www \
   && cd /tmp && wget http://nginx.org/download/nginx-${NGINX_VERSION}.tar.gz \
   && tar zxf nginx-${NGINX_VERSION}.tar.gz \
   && rm nginx-${NGINX_VERSION}.tar.gz \
+  # Get nginx-auth
+  && git clone https://github.com/samizdatco/nginx-http-auth-digest.git \
   # Compile nginx
   && cd /tmp/nginx-${NGINX_VERSION} \
   && ./configure \
