@@ -1,10 +1,10 @@
-FROM alpine:3.4
+FROM alpine:3.15.0
 
-ENV NGINX_VERSION 1.13.8
+ENV NGINX_VERSION 1.20.2
 RUN mkdir -p /opt/data && mkdir /www \
   && apk update \
   && apk add --no-cache \
-    git gcc binutils-libs binutils build-base libgcc make pkgconf pkgconfig \
+    git gcc binutils build-base libgcc make pkgconf pkgconfig \
     openssl openssl-dev ca-certificates pcre \
     musl-dev libc-dev pcre-dev zlib-dev gettext \
     logrotate tzdata \
